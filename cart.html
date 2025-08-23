@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CoffeeShop • Cart</title>
+  <link rel="stylesheet" href="cart.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <a href="index.html" class="logo">CoffeeShop</a>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="cart.html" class="active">Cart</a>
+    </nav>
+    <div id="menu-btn" class="fas fa-bars"></div>
+  </header>
+
+  <!-- Cart Section -->
+  <div class="cart-wrapper">
+    <div class="gradient-block">
+      <div class="cart">
+        <h1>🛒 Your Coffee Cart</h1>
+
+        <div class="cart-items" id="cart-items">
+          <!-- Espresso -->
+          <div class="cart-item" data-price="4.50">
+            <img
+              src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80"
+              alt="Espresso"
+              class="cart-item-img"
+            />
+            <div class="cart-item-details">
+              <h3>Espresso</h3>
+              <span>$4.50</span>
+              <div class="cart-item-quantity">
+                <button class="qty-minus">-</button>
+                <input type="text" value="1" />
+                <button class="qty-plus">+</button>
+              </div>
+            </div>
+            <button class="remove-btn">Remove</button>
+          </div>
+
+          <!-- Americano -->
+          <div class="cart-item" data-price="4.99">
+            <img
+              src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80"
+              alt="Americano"
+              class="cart-item-img"
+            />
+            <div class="cart-item-details">
+              <h3>Americano</h3>
+              <span>$4.99</span>
+              <div class="cart-item-quantity">
+                <button class="qty-minus">-</button>
+                <input type="text" value="1" />
+                <button class="qty-plus">+</button>
+              </div>
+            </div>
+            <button class="remove-btn">Remove</button>
+          </div>
+
+          <!-- Cappuccino -->
+          <div class="cart-item" data-price="5.75">
+            <img
+              src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80"
+              alt="Cappuccino"
+              class="cart-item-img"
+            />
+            <div class="cart-item-details">
+              <h3>Cappuccino</h3>
+              <span>$5.75</span>
+              <div class="cart-item-quantity">
+                <button class="qty-minus">-</button>
+                <input type="text" value="2" />
+                <button class="qty-plus">+</button>
+              </div>
+            </div>
+            <button class="remove-btn">Remove</button>
+          </div>
+
+          <!-- Latte -->
+          <div class="cart-item" data-price="6.25">
+            <img
+              src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80"
+              alt="Latte"
+              class="cart-item-img"
+            />
+            <div class="cart-item-details">
+              <h3>Latte</h3>
+              <span>$6.25</span>
+              <div class="cart-item-quantity">
+                <button class="qty-minus">-</button>
+                <input type="text" value="1" />
+                <button class="qty-plus">+</button>
+              </div>
+            </div>
+            <button class="remove-btn">Remove</button>
+          </div>
+
+          <!-- Mocha -->
+          <div class="cart-item" data-price="6.75">
+            <img
+              src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80"
+              alt="Mocha"
+              class="cart-item-img"
+            />
+            <div class="cart-item-details">
+              <h3>Mocha</h3>
+              <span>$6.75</span>
+              <div class="cart-item-quantity">
+                <button class="qty-minus">-</button>
+                <input type="text" value="1" />
+                <button class="qty-plus">+</button>
+              </div>
+            </div>
+            <button class="remove-btn">Remove</button>
+          </div>
+
+          <!-- Flat White -->
+          <div class="cart-item" data-price="5.95">
+            <img
+              src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80"
+              alt="Flat White"
+              class="cart-item-img"
+            />
+            <div class="cart-item-details">
+              <h3>Flat White</h3>
+              <span>$5.95</span>
+              <div class="cart-item-quantity">
+                <button class="qty-minus">-</button>
+                <input type="text" value="1" />
+                <button class="qty-plus">+</button>
+              </div>
+            </div>
+            <button class="remove-btn">Remove</button>
+          </div>
+        </div>
+
+        <!-- Promo code -->
+        <div class="promo-code">
+          <input type="text" placeholder="Enter Promo Code (e.g., LATTE10)" id="promo-input"/>
+          <button id="promo-apply">Apply</button>
+        </div>
+
+        <!-- Price Summary (static for now) -->
+        <div class="cart-summary" id="cart-summary">
+          <p><span>Subtotal:</span> <strong id="subtotal">$41.19</strong></p>
+          <p><span>Tax (8%):</span> <strong id="tax">$3.30</strong></p>
+          <p class="total"><span>Total:</span> <span id="total">$44.49</span></p>
+        </div>
+
+        <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 CoffeeShop. All rights reserved.</p>
+  </footer>
+
+  <!-- Minimal JS -->
+  <script>
+    function checkout() {
+      alert("Thank you for your purchase!");
+    }
+  </script>
+</body>
+</html>
